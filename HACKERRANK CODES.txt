@@ -1,0 +1,977 @@
+# HACKERRANK-CODES-
+PS1--------------------------------
+#include <stdio.h>
+int main ()
+{
+    int a,b;
+    scanf("%d%d",&a,&b);
+    a=a+b;
+    b=a-b;
+    a=a-b;
+    printf("%d ",a);
+    printf("%d ",b);
+        
+}
+
+
+
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int a,b;float c,d;
+    scanf("%d %d\n",&a,&b);
+    scanf("%f %f\n",&c,&d);
+    printf("%d %d\n",a+b,abs(a-b));
+    printf("%.1f %.1f",c+d,fabs(c-d));
+    return 0;
+}
+
+
+
+
+
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+int main()
+{
+    int f;
+    scanf("%d",&f);
+    float c;
+    c=(f-32)*5.0/9.0;
+    printf("%.2f",c);
+    return 0;
+}
+
+
+
+PS2----------------------------------------------
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main()
+{
+    float p,r,t,si,ci;
+    scanf("%f %f %f",&p,&r,&t);
+    si=(p*r*t)/100;
+    ci=p*pow((1+r/100.0),t);
+    ci=(ci-p);
+    printf("%.2f %.2f",si,ci);
+
+    return 0;
+}
+
+
+
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main()
+{
+    float bs;float hra,da,gs;
+    scanf("%f",&bs);
+    if(bs<=10000)
+    {
+        hra=0.08*bs;da=0.1*bs;
+    }
+    else if(bs<=20000)
+    {
+        hra=0.16*bs;da=0.2*bs;
+    }
+    else if(bs>20000)
+    {
+        hra=0.24*bs;da=0.3*bs;
+    }
+    gs=bs+hra+da;
+    printf("%.2f",gs);
+return 0;
+}
+
+
+
+
+
+#include<stdio.h>
+int main() 
+{
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */int r;
+     
+      scanf("%d",&r);
+      if( ( (r%4 == 0) && (r%100 !=0) ) || (r%400 == 0))
+      {
+        printf("leap year"); 
+      }
+    else{
+        printf("not a leap year");
+    }
+    return 0;
+}
+
+
+
+PS3-------------------------------------------
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int a,b,c;
+    scanf("%d\n%d\n%d",&a,&b,&c);
+    if(a==b&&b==c){
+        printf("Equilateral");
+    }
+    if((a==b&&b!=c)||(b==c&&c!=a)||(a==c&&c!=b))
+    {
+        printf("Isosceles");
+    }
+    if(a!=b&&b!=c){
+        printf("Scalene");
+    }
+    return 0;
+}
+
+
+
+
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() 
+{
+    int a;int rev=0;
+    scanf("%d\n",&a);
+    int num=a;
+    while(num>0)
+    {
+        rev=rev*10+num%10;
+        num=num/10;
+    }
+    if(rev==a)
+        printf("Yes");
+    else
+        printf("No");
+    return 0;
+}
+
+
+
+
+
+
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+  int a, b, c;
+    scanf("%d %d %d", &a, &b, &c);
+    
+    if(a == 0) {
+        printf("Invalid Coefficient");
+        return 0;
+    }
+    
+    int discriminant = b*b - 4*a*c;
+    
+    if(discriminant > 0) {
+        printf("Roots are real and distinct");
+    } else if(discriminant == 0) {
+        printf("Roots are real and equal");
+    } else {
+        printf("Roots are imaginary");
+    }
+    
+    return 0;
+}
+
+
+
+
+PS4---------------------------------------------------------------
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    char c;
+    scanf("%c",&c) ;
+    int a=c;
+    if(a>=65&&a<=90)
+        printf("Uppercase");
+    else if(a>=97&&a<=122)
+        printf("Lowercase");
+    else if(a>=48&&a<=57)
+        printf("Number");
+    else
+        printf("SpecialCharacter");
+}
+
+
+
+
+
+#include <math.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <assert.h>
+#include <limits.h>
+#include <stdbool.h>
+
+int main() {
+    int a,b,c,d,e;
+    scanf("%d %d %d %d %d",&a,&b,&c,&d,&e);
+    int sum=a+b+c+d+e;sum=sum/5;
+    if((a>=0&&a<=100)&&(b>=0&&b<=100)&&(c>=0&&c<=100)&&(d>=0&&d<=100)&&(e>=0&&e<=100))
+    {
+        if(sum>=90)
+            printf("A");
+        else if(sum>=80&&sum<90)
+            printf("B");
+        else if(sum>=60&&sum<80)
+            printf("C");
+        else if(sum<60&&sum>=0)
+            printf("D");        
+    }
+    else
+    {
+        printf("Invalid Score");
+    }
+    return 0;
+}
+
+
+
+
+
+
+
+
+#include <math.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <assert.h>
+#include <limits.h>
+#include <stdbool.h>
+
+int main()
+{
+    int dd,mm,yy;
+    scanf("%d   %d   %d",&dd,&mm,&yy);
+    if(dd>31||mm>12||yy<=1||mm<1||dd<1||(!(yy%4==0&&yy%100!=0||yy%400==0)&&mm==2&&dd>28))
+    {
+        printf("Incorrect Date");
+        return 0;
+    }
+    if(mm>2)
+        mm=mm;
+    else{
+        mm=mm+12;
+        yy--;
+    }
+    int j=yy%100;
+    int k=yy/100;
+    int h=dd+floor(13*(mm+1))/5+j+floor(j/4)+floor(k/4)+5*k;
+    h=h%7;
+    switch(h)
+    {
+
+            case 0:
+            printf("Saturday");
+            break;
+            case 1:
+            printf("Sunday");
+            break;
+        case 2:
+            printf("Monday");
+            break;
+        case 3:
+            printf("Tuesday");
+            break;
+        case 4:
+            printf("Wednesday");
+            break;
+        case 5:
+            printf("Thursday");
+            break;
+        case 6:
+            printf("Friday");
+            break;
+        case 7:
+            printf("Saturday");
+            break;
+            default:
+            printf("Incorrect Date");
+    }
+    return 0;
+}
+
+
+
+
+
+PS5-------------------------------------------------------------------------------
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+    int num1,num2;char ch;
+    scanf("%d %d\n",&num1,&num2);
+    scanf("%c",&ch);
+    switch(ch)
+    {
+        case '+':
+            printf("%d",num1+num2);
+            break;
+        case '-':
+            printf("%d",num1-num2);
+            break;
+        case '*':
+            printf("%d",num1*num2);
+            break;
+        case '/':
+            printf("%d",num1/num2);
+            break;
+        case '%':
+            printf("%d",num1%num2);
+            break;
+        default:
+            printf("Invalid Choice");
+    }
+}
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() 
+{
+    int num1,num2;
+    scanf("%d\n",&num1);
+    scanf("%d\n",&num2);int gcd=0;
+    if(num1>num2)
+    {
+        for(int i=1;i<=num1;i++)
+        {
+            if(num1%i==0&&num2%i==0)
+            {
+                gcd=i;
+            }
+        }
+    }
+    else{
+        for (int i=1;i<=num2;i++)
+        {
+            if(num1%i==0&&num2%i==0)
+            {
+                gcd=i;
+            }
+        }
+    }
+    printf("%d",gcd);
+}
+
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main()
+{
+    int a=0,b=1;int c=a+b;int n;
+    scanf("%d",&n);
+    if(n==1)
+        printf("0");
+    if(n==2)
+        printf("1");
+    int i=3;
+    while(i<=n)
+    {
+        if(i==n)
+            printf("%d",c);
+        a=b;
+        b=c;
+        c=a+b;
+        i++;
+    }
+    return 0;
+}
+
+
+
+
+
+
+
+PS6---------------------------------------------------------------
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int n,m;
+    scanf("%d\n",&n);
+    scanf("%d\n",&m);
+    int i;int dig;int num;int c=0;int s=0;int an=0;
+    for(i=n;i<=m;i++)
+    {
+        num=i;
+        while(num>0)
+        {
+            c++;
+            num=num/10;
+            
+        }
+        num=i;
+        while(num>0)
+        {
+            dig=num%10;
+            s=s+pow(dig,c);
+            num=num/10;
+            
+        }
+        if(s==i)
+        {
+            printf("%d ",i); an++;
+        }
+        s=0;c=0;num=0;
+}
+    printf("\n%d",an);
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() { 
+    int n;
+    scanf("%d\n",&n);
+    int rev=0;
+    while(n>0)
+    {
+        rev=rev*10+n%10;
+        n=n/10;
+    }
+    n=rev;int dig=0;
+    while(n>0)
+    {
+        dig=n%10; n=n/10;
+        switch(dig)
+        {
+             case 0:
+                printf("zero ");
+                break;
+             case 1:
+                printf("one "); 
+                            break;
+
+            case 2:
+                printf("two ");
+                                            break;
+
+            case 3:
+                printf("three "); 
+                                            break;
+
+            case 4:
+                printf("four "); 
+                                            break;
+
+            case 5:
+                printf("five ");
+                                            break;
+
+            case 6:
+                printf("six "); 
+                                            break;
+
+            case 7:
+                printf("seven ");
+                                            break;
+
+          case 8:
+                printf("eight ");
+                                            break;
+
+            case 9:
+                printf("nine ");
+                break;
+
+
+                
+        }
+    }
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int t;int a;int c=0;
+    scanf("%d",&t);
+    for(int i=1;i<=t;i++)
+    {
+        scanf("%d",&a);
+        c=0;
+        for(int j=1;j<=a;j++)
+        {
+            if(a%j==0)
+                c++;
+        }
+        if(c==2)
+            printf("yes\n");
+        else 
+            printf("no\n");
+        
+    }
+    return 0;
+}
+
+
+
+
+
+
+
+
+PS7-----------------------------------------------------------------------------------------------------
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+      int n;
+    scanf("%d", &n);
+    for (int i = 1; i <= n; i++) {
+        for (int j = 1; j <= n; j++) {
+            if (j <= n - i) {
+                printf(" ");
+            } else {
+                printf("*");
+            }
+        }
+        printf("\n");
+    }
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+#include <math.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <assert.h>
+#include <limits.h>
+#include <stdbool.h>
+
+int main() {
+   int N;
+    scanf("%d", &N);
+    int height = floor((-1 + sqrt(8*N + 1))/2);
+    printf("%d\n", height);
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+
+int main() {
+    int n, unit_digit, product = 1;
+
+    scanf("%d", &n);
+
+    unit_digit = n % 10;
+    
+
+    while (n > 0) {
+        int digit = n % 10;
+        product *= digit;
+        n /= 10;
+    }
+
+    printf("%d", product);
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+PS8-------------------------------------------------------------------------------------
+//Q1
+
+#include <stdio.h>
+
+int main()
+{
+    int n, i, sum = 0;
+    scanf("%d", &n);
+    for(i = 1; i < n; i++)
+    {
+        if(n % i == 0)
+        {
+            sum += i;
+        }
+    }
+    if(sum == n)
+    {
+        printf("Yes\n");
+    }
+    else
+    {
+        printf("No\n");
+    }
+    return 0;
+}
+
+//Q2
+
+#include <assert.h>
+#include <limits.h>
+#include <math.h>
+#include <stdbool.h>
+#include <stddef.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+char* readline();
+char** split_string(char*);
+
+// Complete the catAndMouse function below.
+
+// Please either make the string static or allocate on the heap. For example,
+// static char str[] = "hello world";
+// return str;
+//
+// OR
+//
+// char* str = "hello world";
+// return str;
+//
+char* catAndMouse(int x, int y, int z)
+{
+   int catA = abs(x-z);
+   int catB = abs(y-z);
+   if(catA<catB)
+    return "Cat A";
+    else if(catB<catA)
+     return "Cat B";
+    else
+        return "Mouse C";
+}
+
+int main()
+{
+    FILE* fptr = fopen(getenv("OUTPUT_PATH"), "w");
+
+    char* q_endptr;
+    char* q_str = readline();
+    int q = strtol(q_str, &q_endptr, 10);
+
+    if (q_endptr == q_str || *q_endptr != '\0') { exit(EXIT_FAILURE); }
+
+    for (int q_itr = 0; q_itr < q; q_itr++) {
+        char** xyz = split_string(readline());
+
+        char* x_endptr;
+        char* x_str = xyz[0];
+        int x = strtol(x_str, &x_endptr, 10);
+
+        if (x_endptr == x_str || *x_endptr != '\0') { exit(EXIT_FAILURE); }
+
+        char* y_endptr;
+        char* y_str = xyz[1];
+        int y = strtol(y_str, &y_endptr, 10);
+
+        if (y_endptr == y_str || *y_endptr != '\0') { exit(EXIT_FAILURE); }
+
+        char* z_endptr;
+        char* z_str = xyz[2];
+        int z = strtol(z_str, &z_endptr, 10);
+
+        if (z_endptr == z_str || *z_endptr != '\0') { exit(EXIT_FAILURE); }
+
+        char* result = catAndMouse(x, y, z);
+
+        fprintf(fptr, "%s\n", result);
+    }
+
+    fclose(fptr);
+
+    return 0;
+}
+
+char* readline() {
+    size_t alloc_length = 1024;
+    size_t data_length = 0;
+    char* data = malloc(alloc_length);
+
+    while (true) {
+        char* cursor = data + data_length;
+        char* line = fgets(cursor, alloc_length - data_length, stdin);
+
+        if (!line) { break; }
+
+        data_length += strlen(cursor);
+
+        if (data_length < alloc_length - 1 || data[data_length - 1] == '\n') { break; }
+
+        size_t new_length = alloc_length << 1;
+        data = realloc(data, new_length);
+
+        if (!data) { break; }
+
+        alloc_length = new_length;
+    }
+
+    if (data[data_length - 1] == '\n') {
+        data[data_length - 1] = '\0';
+    }
+
+    data = realloc(data, data_length);
+
+    return data;
+}
+
+char** split_string(char* str) {
+    char** splits = NULL;
+    char* token = strtok(str, " ");
+
+    int spaces = 0;
+
+    while (token) {
+        splits = realloc(splits, sizeof(char*) * ++spaces);
+        if (!splits) {
+            return splits;
+        }
+
+        splits[spaces - 1] = token;
+
+        token = strtok(NULL, " ");
+    }
+
+    return splits;
+}
+
+
+
+
+
+
+//Q3
+
+#include <stdio.h>
+
+int factorial(int n) {
+    int result = 1;
+    for (int i = 1; i <= n; i++) {
+        result *= i;
+    }
+    return result;
+}
+
+int is_strong_number(int n) {
+    int original_n = n;
+    int sum_of_factorials = 0;
+    while (n > 0) {
+        int digit = n % 10;
+        sum_of_factorials += factorial(digit);
+        n /= 10;
+    }
+    return sum_of_factorials == original_n;
+}
+
+int main() {
+    int n;
+    scanf("%d", &n);
+    for (int i = 1; i <= n; i++) {
+        if (is_strong_number(i)) {
+            printf("%d ", i);
+        }
+    }
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+PS10--------------------------------------------------------------------------------------------------------------------------
+
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+int main(){
+int n,k,c=0;
+    scanf("%d %d",&n,&k);
+    int arr[n];
+    for(int i=0;i<n;i++)
+    scanf("%d ",&arr[i]);
+    for(int i=0;i<n;i++)
+    {
+        for(int j=0;j<n;j++)
+        {
+            if(i<j)
+            {
+            if((arr[i]+arr[j])%k==0)
+              c++;    
+            }
+                   }
+ }
+    printf("%d",c);
+return 0;
+}
+
+
+
+
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    int n;
+    scanf("%d",&n);int c=0;
+    for(int i=1;i<=n;i++)
+    {
+       if(n%i==0)
+           c++;
+    }
+    if(c%2==0)
+        printf("No");
+    else
+        printf("Yes");
+}
+
+
+
+
+
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    int n;
+    scanf("%d",&n);
+    int d=0;
+    while(n>0)
+    {
+        d=n%10;
+        printf("%d",d);
+        n/=10;
+    }
+       
+}
+
+
+
+PS11---------------------------------------------------------------------------------------------------------------------------------
+
+#include <stdio.h>
+
+int main() {
+    int n, i, sum = 0;
+    scanf("%d", &n); // Input the day number
+    for (i = 1; i < n; i++) {
+        int x;
+        scanf("%d", &x); // Input the amount earned on each day
+        sum += x; // Add the amount to the total sum
+    }
+    printf("%d\n", sum); // Print the total sum
+    return 0;
+}
